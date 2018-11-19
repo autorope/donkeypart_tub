@@ -1,7 +1,8 @@
+import random
 import platform
+import numpy as np
 import pytest
-from donkeycar.parts.datastore import Tub
-from donkeycar.parts.simulation import SquareBoxCamera, MovingSquareTelemetry
+from ..donkeypart_tub import Tub
 
 
 def on_pi():
@@ -41,10 +42,12 @@ def create_sample_tub(path, records=10):
 
 
 def create_sample_record():
-    cam = SquareBoxCamera()
-    tel = MovingSquareTelemetry()
-    x, y = tel.run()
-    img_arr = cam.run(x, y)
-    return {'cam/image_array': img_arr, 'angle': x, 'throttle':y}
+    img_arr = np.random.randint(0, 255, (120, 160, 3))
+    record = {
+        'cam/image_array': img_arr,
+        'angle': random.uniform(-1, 1),
+        'throttle':random.uniform(-1, 1)
+    }
+    return record
 
 
