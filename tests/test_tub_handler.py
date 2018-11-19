@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
-from donkeycar.parts.datastore import TubHandler
+from ..donkeypart_tub import TubHandler
 from .setup import tubs
 
 
