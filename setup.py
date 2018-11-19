@@ -22,7 +22,7 @@ setup(name='donkeypart_tub',
                         'pandas',
                         ],
 
-      extras_require={'ci': ['pytest-cov']},
+      extras_require={'dev': ['pytest-cov']},
       classifiers=[
           'Development Status :: 3 - Alpha',
           'Intended Audience :: Developers',
