@@ -41,4 +41,4 @@ def test_tubgroup_get_num_records(tubs):
     list_of_tubs = tubs[1]
     str_of_tubs = ','.join(list_of_tubs)
     t = TubGroup(str_of_tubs)
-    assert t.get_num_records() == 25
+    assert t.get_num_records() == 25 
