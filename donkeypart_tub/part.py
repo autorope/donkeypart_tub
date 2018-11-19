@@ -17,7 +17,6 @@ import numpy as np
 import pandas as pd
 from PIL import Image
 
-from donkeycar import util
 import glob
 
 from .log import get_logger
