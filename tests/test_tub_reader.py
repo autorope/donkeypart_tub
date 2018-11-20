@@ -3,7 +3,7 @@ import unittest
 import tempfile
 import os
 
-from ..donkeypart_tub import TubReader, TubWriter
+from donkeypart_tub import TubReader, TubWriter
 
 
 def test_tubreader():

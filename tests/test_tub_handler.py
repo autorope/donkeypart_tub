@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
-from ..donkeypart_tub import TubHandler
+from donkeypart_tub import TubHandler
 from .setup import tubs
 
 

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from ..donkeypart_tub import TubGroup
+from donkeypart_tub import TubGroup
 from .setup import tubs
 
 

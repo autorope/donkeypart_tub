@@ -2,7 +2,7 @@ import random
 import platform
 import numpy as np
 import pytest
-from ..donkeypart_tub import Tub
+from donkeypart_tub import Tub
 
 
 def on_pi():

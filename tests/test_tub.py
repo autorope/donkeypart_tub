@@ -4,7 +4,7 @@ import pytest
 import tempfile
 import tarfile
 from PIL import Image
-from ..donkeypart_tub import Tub
+from donkeypart_tub import Tub
 from .setup import tub, tub_path, create_sample_record
 
 
