@@ -629,8 +629,7 @@ class TubTimeStacker(TubImageStacker):
 
 
 class TubGroup(Tub):
-    def __init__(self, tub_paths_arg):
-        tub_paths = expand_path_arg(tub_paths_arg)
+    def __init__(self, tub_paths):
         logger.info('TubGroup:tubpaths: {}'.format(tub_paths))
         self.tubs = [Tub(path) for path in tub_paths]
         self.input_types = {}
@@ -669,6 +668,7 @@ def expand_path_mask(path):
     for file in glob.glob(path):
         if os.path.isdir(file):
             matches.append(os.path.join(os.path.abspath(file)))
+    print('matches', matches)
     return matches
 
 
@@ -676,7 +676,10 @@ def expand_path_mask(path):
 def expand_path_arg(path_str):
     path_list = path_str.split(",")
     expanded_paths = []
+    print('path_list', path_list)
     for path in path_list:
         paths = expand_path_mask(path)
-        expanded_paths += paths
+        expanded_paths+=paths
+        #path = os.path.expanduser(path)
+        #expanded_paths.append(path)
     return expanded_paths
